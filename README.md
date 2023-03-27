@@ -1,6 +1,5 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Imersão  Java Alura
+###CONSUMINDO UMA API DE FILMES COM JAVA 
 
 ## Folder Structure
 

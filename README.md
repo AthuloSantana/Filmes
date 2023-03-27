@@ -2,8 +2,8 @@
 Parte 1:
 CONSUMINDO UMA API DE FILMES COM JAVA
 
-## feramentas uilizadas
-VsCode
-api do IMDB
+## Feramentas uilizadas
+VsCode.
+API do IMDB.
 
 

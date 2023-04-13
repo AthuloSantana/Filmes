@@ -1,3 +1,4 @@
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -8,6 +9,11 @@ import java.util.Map;
 
 public class Melhores {
     public static void main(String[] args) throws Exception {
+        String reset = "\u001B[0m";
+        String read = "\u001B[31m";
+        String blue = "\u001B[34m";
+        String yellow = "\033[33m";
+        
         // ====Fazer a conexão HTTP=====
         //Armazenar a URL em uma string
         String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
@@ -31,11 +37,16 @@ public class Melhores {
 
         //==== exibir e Manipular os dados ======
         for (Map<String,String> filme : listaDeFilmes) {
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("imDbRating"));
+            System.out.println(read + filme.get("title") + reset);
+            System.out.println(blue + filme.get("image") + reset);
+            double avaliacao = Double.parseDouble(filme.get( "imDbRating"));
+            int avaliacaoInt = (int) avaliacao;
+    
+            for(int i=0; i<avaliacaoInt; i++){
+                // aparece uma interrogacao, mas deveria aparecer uma estrela 
+                System.out.print(yellow + "\u2B50" + reset);
+            }
             System.out.println("\n");
         }
-
     }
 }
